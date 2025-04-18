@@ -26,7 +26,7 @@ const Dashboard = () => {
 
   const fetchEntries = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/diary", {
+      const res = await axios.get("https://myddapp.onrender.com/api/diary", {
         headers: { token },
       });
       const decrypted = res.data.map((entry) => ({
@@ -45,7 +45,7 @@ const Dashboard = () => {
     const encrypted = encryptContent(diary, secret);
     try {
       await axios.post(
-        "http://localhost:4000/api/diary",
+        "https://myddapp.onrender.com/api/diary",
         { content: encrypted },
         {
           headers: { token },
@@ -91,7 +91,7 @@ const Dashboard = () => {
     const encrypted = encryptContent(diary, secret);
     try {
       await axios.put(
-        `http://localhost:4000/api/diary/${editingEntry._id}`,
+        `https://myddapp.onrender.com/api/diary/${editingEntry._id}`,
         { content: encrypted },
         {
           headers: { token },
@@ -110,7 +110,7 @@ const Dashboard = () => {
     console.log("Attempting to delete entry with ID:", id); // Log the ID being deleted
 
     try {
-      await axios.delete(`http://localhost:4000/api/diary/${id}`, {
+      await axios.delete(`https://myddapp.onrender.com/api/diary/${id}`, {
         headers: { token },
       });
       console.log(`Entry with ID ${id} deleted successfully`); // Log success message

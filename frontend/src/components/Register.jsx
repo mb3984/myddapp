@@ -12,7 +12,7 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/auth/register",
+        "https://myddapp.onrender.com/api/auth/register",
         {
           email,
           password,
