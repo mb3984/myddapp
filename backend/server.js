@@ -20,7 +20,7 @@ const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
       ? "https://myddapp.onrender.com"
-      : "*", // Change to your actual frontend URL in production
+      : "http://localhost:5173", // Change to your actual frontend URL in production
 };
 
 app.use(cors(corsOptions));
