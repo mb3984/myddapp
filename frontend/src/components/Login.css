@@ -1,0 +1,89 @@
+/* components/Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #ff7e5f 0%,
+    #feb47b 100%
+  ); /* Gradient background unique to login */
+  padding: 20px;
+  color: white; /* White text on gradient background */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333; /* Dark text inside inputs */
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #feb47b; /* Orange-yellow border on focus */
+  box-shadow: 0 0 10px rgba(254, 180, 123, 0.4); /* Subtle glow effect */
+}
+
+button {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7e5f;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e05e48;
+}
+
+.alert {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  input,
+  button {
+    font-size: 1rem;
+  }
+}

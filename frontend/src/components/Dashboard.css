@@ -1,0 +1,162 @@
+/* components/Dashboard.css */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #6a11cb 0%,
+    #2575fc 100%
+  ); /* Gradient background unique to dashboard */
+  color: white;
+  padding: 30px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #2575fc; /* Blue border on focus */
+  box-shadow: 0 0 10px rgba(37, 117, 252, 0.4); /* Blue glow effect */
+}
+
+button {
+  padding: 12px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a11cb;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2575fc;
+}
+
+.select-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #2575fc;
+}
+
+ul {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.alert {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+/*buyttons*/
+/* components/Dashboard.css */
+
+button {
+  padding: 12px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a11cb;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2575fc;
+}
+
+/* Styling Edit and Delete buttons for each diary entry */
+ul li button {
+  margin-left: 10px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  background-color: #ff4747; /* Red for delete */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+ul li button:hover {
+  background-color: #e03a3a; /* Darker red on hover */
+}
+
+ul li button:nth-child(2) {
+  background-color: #ff8c00; /* Orange for edit */
+}
+
+ul li button:nth-child(2):hover {
+  background-color: #e07c00; /* Darker orange on hover */
+}
