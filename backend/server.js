@@ -4,6 +4,7 @@ import path from "path";
 
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
+dotenv.config({ path: path.resolve("../.env") });
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import diaryRoutes from "./routes/diaryRoutes.js";
@@ -13,7 +14,7 @@ dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: "*" }));
 
 app.use(express.json());
 
