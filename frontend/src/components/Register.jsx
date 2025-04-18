@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Register.css";
 
 const Register = () => {
@@ -18,21 +18,13 @@ const Register = () => {
           password,
         }
       );
-      console.log(response);
 
       alert("Registration successful! Please login.");
       navigate("/login");
+      console.log(response);
     } catch (error) {
       console.error("Registration failed:", error);
-      if (
-        error.response &&
-        error.response.data &&
-        error.response.data.message === "User already exists"
-      ) {
-        setError("User already exists");
-      } else {
-        setError("Registration failed. Please try again.");
-      }
+      setError("Registration failed. Please try again.");
     }
   };
 
@@ -53,13 +45,13 @@ const Register = () => {
       />
       <button onClick={handleRegister}>Register</button>
 
-      {error && <div className="alert">{error}</div>}
+      {/* Link to login page */}
+      <span className="login-prompt">
+        Already registered? <Link to="/login">Please login</Link>.
+      </span>
 
-      {error === "User already exists" && (
-        <span className="already-registered">
-          Already registered? <a href="/login">Login here</a>
-        </span>
-      )}
+      {/* Error alert */}
+      {error && <div className="alert">{error}</div>}
     </div>
   );
 };

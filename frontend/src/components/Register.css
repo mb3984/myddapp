@@ -88,19 +88,14 @@ button:hover {
   }
 }
 
-.already-registered {
-  color: #ffcc00; /* Yellowish message to stand out on gradient */
-  margin-top: 12px;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.already-registered a {
+.login-prompt {
+  margin-top: 10px;
+  font-size: 0.95rem;
   color: #ffffff;
-  text-decoration: underline;
-  margin-left: 5px;
 }
 
-.already-registered a:hover {
-  color: #ddd;
+.login-prompt a {
+  color: #ffdd57;
+  text-decoration: underline;
+  cursor: pointer;
 }
